@@ -1,33 +1,28 @@
 const myUnorderedList = document.createElement("ul")
-const myInput = document.createElement("input")
-const myButton = document.createElement("button")
+document.body.appendChild(myUnorderedList)
+const myInput = document.querySelector("#item")
+const myButton = document.querySelector("#btn")
 
-// const btn = document.querySelector("#btn");
+
 
 myButton.addEventListener("click", () => {
-  const myItem = myInput.value;
-  myInput.value = '';
+    const myItem = myInput.value;
+    myInput.value = '';
 
-  const myList = document.createElement("li");
-  const mySpan = document.createElement("span");
-  const myListButton = document.createElement("button"); 
+    const myList = document.createElement("li");
+    const mySpan = document.createElement("span");
+    const myListButton = document.createElement("button");
+git 
+    myList.appendChild(mySpan);
+    myList.appendChild(myListButton);
+    mySpan.textContent = myItem;
+    myListButton.textContent = "Delete";
+    myUnorderedList.appendChild(myList);
 
-
-
-  myList.appendChild(mySpan);
-  mySpan.textContent= myItem;
-  myList.appendChild(myListButton);
-  myListButton.textContent = "Delete";
-  list.appendChild(myList);
-//   myList.appendChild(myListButton);
-//   mySpan.textContent = myItem;
-//   myButton.textContent = "Delete";
-//   myUnorderedList.appendChild(myList);
-
-  myListButton.addEventListener("click", () => {
-    list.removeChild(myList);
-  });
-input.focus();
+    myListButton.addEventListener("click", () => {
+        myUnorderedList.removeChild(myList);
+    });
+    myInput.focus();
 });
 
 
