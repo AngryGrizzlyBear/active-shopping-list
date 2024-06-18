@@ -1,8 +1,9 @@
 const myUnorderedList = document.createElement("ul")
-const myInput = document.createElement("input")
-const myButton = document.createElement("button")
+document.body.appendChild(myUnorderedList)
+const myInput = document.querySelector("#item")
+const myButton = document.querySelector("#btn")
 
-// const btn = document.querySelector("#btn");
+
 
 myButton.addEventListener("click", () => {
     const myItem = myInput.value;
@@ -11,24 +12,17 @@ myButton.addEventListener("click", () => {
     const myList = document.createElement("li");
     const mySpan = document.createElement("span");
     const myListButton = document.createElement("button");
-
-
-
+git 
     myList.appendChild(mySpan);
-    mySpan.textContent = myItem;
     myList.appendChild(myListButton);
+    mySpan.textContent = myItem;
     myListButton.textContent = "Delete";
-    list.appendChild(myList);
-
-    //   myList.appendChild(myListButton);
-    //   mySpan.textContent = myItem;
-    //   myButton.textContent = "Delete";
-    //   myUnorderedList.appendChild(myList);
+    myUnorderedList.appendChild(myList);
 
     myListButton.addEventListener("click", () => {
-        list.removeChild(myList);
+        myUnorderedList.removeChild(myList);
     });
-    input.focus();
+    myInput.focus();
 });
 
 
